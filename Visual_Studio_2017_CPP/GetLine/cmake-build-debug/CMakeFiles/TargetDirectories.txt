@@ -1,0 +1,3 @@
+C:/Users/user/Desktop/C++ Practice/C++Project/GetLine/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/user/Desktop/C++ Practice/C++Project/GetLine/cmake-build-debug/CMakeFiles/getline.dir
+C:/Users/user/Desktop/C++ Practice/C++Project/GetLine/cmake-build-debug/CMakeFiles/edit_cache.dir
