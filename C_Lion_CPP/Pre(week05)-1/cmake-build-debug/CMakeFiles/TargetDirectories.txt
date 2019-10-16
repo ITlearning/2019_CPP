@@ -1,0 +1,3 @@
+C:/Users/IoT-14/Desktop/CPP/Pre(week05)-1/cmake-build-debug/CMakeFiles/Pre_week05__1.dir
+C:/Users/IoT-14/Desktop/CPP/Pre(week05)-1/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/IoT-14/Desktop/CPP/Pre(week05)-1/cmake-build-debug/CMakeFiles/rebuild_cache.dir

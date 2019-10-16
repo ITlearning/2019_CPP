@@ -1,24 +1,26 @@
 #include <stdio.h>
-#define MAX_N 15
-
-int weight[MAX_N + 1];
+#define MAX 100000
+int num[MAX];
 int result = 0;
 int N = 0;
 
 void countTeams(int h, int wA, int wB, int wC) {
 	if (h == N) {
-		if ((wA == wB) &(wB == wC)) {
-			result++;
-
-		}
 		return;
 	}
 	else {
+		if (h % 3 == 0) {
+			h++;
+			countTeams(h, wA, wB, wC);
+			countTeams(h, wA - num[h], wB, wC);
+			countTeams(h, wA, wB - num[h], wC);
+			countTeams(h, wA, wB, wC - num[h]);
+		}
 		h++;
 		countTeams(h, wA, wB, wC);
-		countTeams(h, wA + weight[h], wB, wC);
-		countTeams(h, wA, wB + weight[h], wC);
-		countTeams(h, wA, wB, wC + weight[h]);
+		countTeams(h, wA + num[h], wB, wC);
+		countTeams(h, wA, wB + num[h], wC);
+		countTeams(h, wA, wB, wC + num[h]);
 	}
 }
 
@@ -32,7 +34,7 @@ int main() {
 		scanf("%d", &N);
 
 		for (int j = 1; j <= N; j++) {
-			scanf("%d", &weight[j]);
+			scanf("%d", &num[j]);
 		}
 		countTeams(0, 0, 0, 0);
 

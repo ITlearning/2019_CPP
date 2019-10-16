@@ -1,0 +1,3 @@
+C:/Users/IoT-14/Desktop/CPP/w05-4/cmake-build-debug/CMakeFiles/w05_4.dir
+C:/Users/IoT-14/Desktop/CPP/w05-4/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/IoT-14/Desktop/CPP/w05-4/cmake-build-debug/CMakeFiles/rebuild_cache.dir
