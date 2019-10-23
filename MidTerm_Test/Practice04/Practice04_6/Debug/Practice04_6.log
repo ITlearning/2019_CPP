@@ -1,0 +1,6 @@
+﻿  p4-6.cpp
+c:\users\user\desktop\cpp\midterm_test\practice04\practice04_6\p4-6.cpp(19): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  d:\windows kits\10\include\10.0.17763.0\ucrt\string.h(133): note: 'strcpy' 선언을 참조하십시오.
+c:\users\user\desktop\cpp\midterm_test\practice04\practice04_6\p4-6.cpp(30): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  d:\windows kits\10\include\10.0.17763.0\ucrt\string.h(133): note: 'strcpy' 선언을 참조하십시오.
+  Practice04_6.vcxproj -> C:\Users\user\Desktop\CPP\MidTerm_Test\Practice04\Debug\Practice04_6.exe
