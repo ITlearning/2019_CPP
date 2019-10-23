@@ -1,0 +1,19 @@
+﻿  20181515_인병윤_P4.cpp
+c:\users\iot-14\desktop\mid_cpp\cpp01\cpp3-2\20181515_인병윤_p4.cpp(79): error C2059: 구문 오류: ')'
+c:\users\iot-14\desktop\mid_cpp\cpp01\cpp3-2\20181515_인병윤_p4.cpp(84): error C2039: 'srand': 'Maze'의 멤버가 아닙니다.
+  c:\users\iot-14\desktop\mid_cpp\cpp01\cpp3-2\20181515_인병윤_p4.cpp(31): note: 'Maze' 선언을 참조하십시오.
+c:\users\iot-14\desktop\mid_cpp\cpp01\cpp3-2\20181515_인병윤_p4.cpp(84): error C2039: 'time': 'Maze'의 멤버가 아닙니다.
+  c:\users\iot-14\desktop\mid_cpp\cpp01\cpp3-2\20181515_인병윤_p4.cpp(31): note: 'Maze' 선언을 참조하십시오.
+c:\users\iot-14\desktop\mid_cpp\cpp01\cpp3-2\20181515_인병윤_p4.cpp(84): error C2065: 'time': 선언되지 않은 식별자입니다.
+c:\users\iot-14\desktop\mid_cpp\cpp01\cpp3-2\20181515_인병윤_p4.cpp(84): error C2065: 'srand': 선언되지 않은 식별자입니다.
+c:\users\iot-14\desktop\mid_cpp\cpp01\cpp3-2\20181515_인병윤_p4.cpp(85): error C2146: 구문 오류: ';'이(가) 'maze' 식별자 앞에 없습니다.
+c:\users\iot-14\desktop\mid_cpp\cpp01\cpp3-2\20181515_인병윤_p4.cpp(85): error C2275: 'Maze': 이 형식을 식으로 잘못 사용했습니다.
+c:\users\iot-14\desktop\mid_cpp\cpp01\cpp3-2\20181515_인병윤_p4.cpp(85): error C2597: 비정적 멤버 'Maze::maze'에 대한 참조가 잘못되었습니다.
+c:\users\iot-14\desktop\mid_cpp\cpp01\cpp3-2\20181515_인병윤_p4.cpp(86): error C2228: '.' 왼쪽에는 클래스/구조체/공용 구조체가 있어야 합니다.
+c:\users\iot-14\desktop\mid_cpp\cpp01\cpp3-2\20181515_인병윤_p4.cpp(86): error C2248: 'Maze::maze': private 멤버('Maze' 클래스에서 선언)에 액세스할 수 없습니다.
+  c:\users\iot-14\desktop\mid_cpp\cpp01\cpp3-2\20181515_인병윤_p4.cpp(33): note: 'Maze::maze' 선언을 참조하십시오.
+  c:\users\iot-14\desktop\mid_cpp\cpp01\cpp3-2\20181515_인병윤_p4.cpp(31): note: 'Maze' 선언을 참조하십시오.
+c:\users\iot-14\desktop\mid_cpp\cpp01\cpp3-2\20181515_인병윤_p4.cpp(86): error C2171: '*': 'int (Maze::* )[5][5]' 형식의 피연산자에는 맞지 않습니다.
+c:\users\iot-14\desktop\mid_cpp\cpp01\cpp3-2\20181515_인병윤_p4.cpp(86): error C2662: 'void Maze::showMaze(void)': 'this' 포인터를 'int (Maze::* )[5][5]'에서 'Maze &'(으)로 변환할 수 없습니다.
+  c:\users\iot-14\desktop\mid_cpp\cpp01\cpp3-2\20181515_인병윤_p4.cpp(86): note: 원인: 'int (Maze::* )[5][5]'에서 'Maze'(으)로 변환할 수 없습니다.
+  c:\users\iot-14\desktop\mid_cpp\cpp01\cpp3-2\20181515_인병윤_p4.cpp(86): note: 변환하려면 둘째 사용자 정의 변환 연산자 또는 생성자가 있어야 합니다.
