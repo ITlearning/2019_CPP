@@ -37,6 +37,7 @@ public:
 	string getAge() { return age; }
 	string getWeight() { return weight; }
 	int getVote() { return vote; }
+	void setVote(int num) { this->vote = num; }
 	bool operator <(Participant &p) { return this->vote > p.vote; }
 
 	void add(string text) {
@@ -148,10 +149,31 @@ public:
 		//참가자의 등수 상승,하락 폭을 가시화 해줌 
 		//1주차 : 10위, 2주차 : 5위 ,뭐 이런식으로
 	}
-	void pheonix() {
+	void pheonix(Participant p[]) {
+		string name;
+		int num;
 		//관리자는, 모든 참가자의 투표수에 관여할 수 있음 (*조작 가능)
 		//어떤참가자의 어떤부분을 조작할건지 묻고 실행
 		//투표수를 조작하게 되면, 몇표 추가할건지, 뺄건지 정해서,참가자 객체 내의 vote 수 바꿔줌.
+
+		cout << "조작 기능에 오신 것을 환영합니다." << endl;
+		cout << "이 기능은 투표수 자체를 조작할 수도 있고 , 없앨수도 있는 기능입니다." << endl;
+		cout << "어떤 사람의 투표수를 조작하고 싶으십니까?" << endl;
+		for (int i = 0; i < People; i++) {
+			cout << p[i].getName() << ' ';
+		}
+		cout << endl;
+		cout << ">>";
+		cin >> name;
+			for (int i = 0; i < People; i++) {
+				if (p[i].getName() == name) {
+					cout << "현재 " << p[i].getName() << " 의 투표수는 " << p[i].getVote() << " 입니다." << endl;
+					cout << "투표수를 얼마나 바꾸고 싶으십니까? >> ";
+					cin >> num;
+					p[i].setVote(num);
+					cout << "성공적으로 투표수를 바꾸었습니다. 변경된 투표수는 바로 적용됩니다." << endl;
+				}
+			}
 	}
 	void comment(Participant a[], Viewer b) {
 		string name;
@@ -261,14 +283,15 @@ int main() {
 			cout << "[3]: Show!\t";
 			cout << "[4]: Best!\t" << endl;
 			cout << "[5]: Rank2\t";
-			cout << "[6]: Back!\t" << endl;
-			cout << "[7]: Exit!\t" << endl;
+			cout << "[6]: Phonix\t" << endl;
+			cout << "[7]: Back!\t";
+			cout << "[8]: Exit!\t" << endl;
 			cout << ">> ";
 			cin >> num;
 
 			system("cls");
 
-			if (num == 6) {
+			if (num == 7) {
 				continue;
 			}
 			else if (num == 1) {
@@ -286,7 +309,10 @@ int main() {
 			else if (num == 5) {
 				;
 			}
-			else if (num == 7) {
+			else if (num == 6) {
+				a.pheonix(b);
+			}
+			else if (num == 8) {
 				break;
 			}
 
