@@ -1,7 +1,7 @@
 #pragma once
 #include "Participant.h"
 #include "Viewer.h"
-static vector<Participant> Group;
+
 using namespace std;
 
 class Manager :public Viewer {
@@ -9,7 +9,7 @@ class Manager :public Viewer {
 	int BV;
 	string position, name, tall, age, weight;
 public:
-	void addP();
+	void addP(vector<Participant> p);
 	void deleteP(Participant a);
 	void graph(Participant a);
 	void pheonix(vector<Participant> p);

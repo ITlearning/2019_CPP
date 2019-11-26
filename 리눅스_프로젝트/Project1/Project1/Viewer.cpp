@@ -4,8 +4,7 @@ using namespace std;
 int Pick = NULL;
 	void Viewer::vote(vector<Participant> p) {
 		cout << "어떤 연습생에게 투표하시겠습니까?" << endl;
-		string name;
-		for (int i = 0; i < People; i++) {
+		for (int i = 0; i < p.size(); i++) {
 			cout << p[i].getName() << " 연습생 (" << p[i].getPosition() << ")" << endl;
 		}
 		cin >> name;
@@ -17,12 +16,38 @@ int Pick = NULL;
 	}
 
 	void Viewer::show(vector<Participant> p) {
-		//sort(p, p + 3);
-		for (int i = 0; i < People; i++) {
-			cout << i + 1 << "등 : " << p[i].getName() << "\t 투표수 : " << p[i].getVote() << endl;
+		string name;
+		cout << "Please input the name that you want to see>>";
+		cin >> name;
+		for (int i = 0; i < p.size(); i++) {
+			if (p[i].getName() == name) {
+				cout << "이름:" << p[i].getName() << " 포지션: " << p[i].getPosition() << " 키: " << p[i].getTall() << " 몸무게: " << p[i].getWeight() << " 나이: " << p[i].getAge() << endl;;
+			}
+		}
+		if (state == 0) {
+			cout << "1을 입력하면 이전화면으로 돌아갑니다.";
+			cin >> state;
+			if (state == 1) {
+				state = 0;
+				system("cls");
+			}
 		}
 	}
-
+	
+	void Viewer::Rank(vector<Participant> p) {
+		//sort(p, p + 3);
+		for (int i = 0; i < p.size(); i++) {
+			cout << i + 1 << "등 : " << p[i].getName() << "\t 투표수 : " << p[i].getVote() << endl;
+		}
+		if (state == 0) {
+			cout << "1을 입력하면 이전화면으로 돌아갑니다.";
+			cin >> state;
+			if (state == 1) {
+				state = 0;
+				system("cls");
+			}
+		}
+	}
 	void Viewer::mypick(vector<Participant> p) {
 		int num;
 		//자신의 고정픽을 선정하여, 매주 한표씩 자동으로 투표되게 함.
@@ -66,7 +91,7 @@ int Pick = NULL;
 		cout << endl;
 		cout << "                                 [자신이 좋아하는 연습생에게 응원의 한마디를 해주세요!]                                   " << endl;
 		cout << "************************************************ List of Participant  **************************************************" << endl;
-		for (int i = 0; i < People; i++) {
+		for (int i = 0; i < p.size(); i++) {
 			cout << "[" << p[i].getName() << "]" << " 연습생! " << endl;
 		}
 		cout << ">> ";
@@ -74,7 +99,7 @@ int Pick = NULL;
 
 		system("cls");
 
-		for (int i = 0; i < People - 1; i++) {
+		for (int i = 0; i < p.size() - 1; i++) {
 			if (p[i].getName() == name) {
 				cout << "*********************************************** Produce X*I Community  *************************************************" << endl;
 				cout << endl;
@@ -82,7 +107,7 @@ int Pick = NULL;
 				cout << "***************************************** Input Text for chosen participant ********************************************" << endl;
 				cout << ">> ";
 				cin >> Vname >> commit;
-				//viewer.insert(make_pair(Vname, commit));
+				viewer.insert(make_pair(Vname, commit));
 				system("cls");
 			}
 		}

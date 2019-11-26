@@ -115,9 +115,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Main.cpp" />
     <ClCompile Include="Manager.cpp" />
     <ClCompile Include="Participant.cpp" />
-    <ClCompile Include="Test.cpp" />
     <ClCompile Include="Viewer.cpp" />
   </ItemGroup>
   <ItemGroup>

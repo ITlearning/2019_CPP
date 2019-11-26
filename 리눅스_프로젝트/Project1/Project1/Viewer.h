@@ -6,16 +6,17 @@
 #include <map>
 #include <algorithm>
 #include <ctime>
-#define People 3
+#define People 5
 using namespace std;
-
 class Viewer {
 public:
 	int Pick;
+	int state = 0;
 	map< string, string > viewer;
 	string name, comment;
 	void vote(vector<Participant> p);
 	void show(vector<Participant> p);
 	void mypick(vector<Participant> p);
+	void Rank(vector<Participant> p);
 	void cheerup(vector<Participant> p);
 };

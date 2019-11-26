@@ -2,10 +2,9 @@
 #include "Participant.h"
 #include "Viewer.h"
 #include "Manager.h"
-#define People 3
 
 using namespace std;
-
+vector<Participant> Group;
 int num = 0;
 int main() {
 	Manager a;
@@ -28,10 +27,11 @@ int main() {
 			cout << endl;
 			cout << "[1]: Vote!\t";
 			cout << "[2]: Rank!\t" << endl;
-			cout << "[3]: Pick!\t";
-			cout << "[4]: Cheer\t" << endl;
-			cout << "[5]: Back!\t";
-			cout << "[6]: Exit!\t" << endl;
+			cout << "[3]: Show!\t";
+			cout << "[4]: Pick!\t";
+			cout << "[5]: Cheer\t" << endl;
+			cout << "[6]: Back!\t";
+			cout << "[7]: Exit!\t" << endl;
 			cout << endl;
 			cout << "******************************************************* Choice ********************************************************" << endl;
 			cout << ">> ";
@@ -46,16 +46,23 @@ int main() {
 				c.vote(Group);
 			}
 			else if (num == 2) {
-				c.show(Group);
+				c.Rank(Group);
 			}
 			else if (num == 3) {
-				c.mypick(Group);
+				c.show(Group);
 			}
 			else if (num == 4) {
+				if (Group.size() == 0) {
+					cout << "등록된 참가자가 없습니다." << endl;
+					exit;
+				}
+				c.mypick(Group);
+			}
+			else if (num == 5) {
 				c.cheerup(Group);
 			}
 			else if (num == 6) {
-				break;
+				continue;
 			}
 		}
 
@@ -67,7 +74,7 @@ int main() {
 			cout << "[9]: Input\t" << endl;
 			cout << "[3]: Show!\t";
 			cout << "[4]: Best!\t";
-			cout << "[10]: addPr\t" << endl;
+			cout << "[10]: addP\t" << endl;
 			cout << "[5]: Rank2\t";
 			cout << "[6]: Phonix\t" << endl;
 			cout << "[7]: Back!\t";
@@ -83,16 +90,16 @@ int main() {
 				continue;
 			}
 			else if (num == 1) {
-				;
+				a.vote(Group);
 			}
 			else if (num == 2) {
-				;
+				a.Rank(Group);
 			}
 			else if (num == 3) {
-				a.comment(Group, c);
+				a.show(Group);
 			}
 			else if (num == 4) {
-				;
+				a.comment(Group, c);;
 			}
 			else if (num == 5) {
 				;
@@ -115,6 +122,9 @@ int main() {
 				}
 
 				system("cls");
+			}
+			else if (num == 10) {
+				a.addP(Group);
 			}
 			else {
 				continue;

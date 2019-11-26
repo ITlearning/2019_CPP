@@ -15,9 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Test.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="Participant.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
@@ -25,6 +22,9 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="Manager.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

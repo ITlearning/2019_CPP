@@ -1,13 +1,10 @@
 #include "Manager.h"
-	void Manager::addP() {
-		Participant b;
+	void Manager::addP(vector<Participant> p) {
 		cout << "등록할 사람을 입력하세요 [포지션, 이름, 키, 나이, 몸무게 순입니다] " << endl;
 		cout << ">> ";
 		cin >> position >> name >> tall >> age >> weight;
 		Participant A(position, name, tall, age, weight);
-		Group.push_back(A);
-		b.setParticipant(position, name, tall, age, weight);
-		// Group[num].push_back(b);
+		p.push_back(A);
 	}
 	void Manager::deleteP(Participant a) {
 		//참가자 삭제
@@ -26,13 +23,13 @@
 		cout << "조작 기능에 오신 것을 환영합니다." << endl;
 		cout << "이 기능은 투표수 자체를 조작할 수도 있고 , 없앨수도 있는 기능입니다." << endl;
 		cout << "어떤 사람의 투표수를 조작하고 싶으십니까?" << endl;
-		for (int i = 0; i < People; i++) {
+		for (int i = 0; i < p.size(); i++) {
 			cout << p[i].getName() << ' ';
 		}
 		cout << endl;
 		cout << ">>";
 		cin >> name;
-		for (int i = 0; i < People; i++) {
+		for (int i = 0; i <	p.size(); i++) {
 			if (p[i].getName() == name) {
 				cout << "현재 " << p[i].getName() << " 의 투표수는 " << p[i].getVote() << " 입니다." << endl;
 				cout << "투표수를 얼마나 바꾸고 싶으십니까? >> ";
@@ -42,7 +39,7 @@
 			}
 		}
 	}
-	void Manager::comment(vector<Participant> a, Viewer b) {
+	void Manager::comment(vector<Participant> p, Viewer b) {
 		string Pname;
 		string Vname;
 		//게시판에 들어가, 가장 따뜻한 말을 쓴 글쓴이를 추천.
@@ -57,21 +54,21 @@
 		cout << ">> Who is want you see??" << endl;
 		cout << "************************************************** Participants List **************************************************" << endl;
 
-		for (int i = 0; i < People; i++) {
-			cout << "[" << i + 1 << "]" << ": " << a[i].getName() << endl;
+		for (int i = 0; i < p.size(); i++) {
+			cout << "[" << i + 1 << "]" << ": " << p[i].getName() << endl;
 		}
 		cout << "***********************************************************************************************************************" << endl;
 		cout << ">> ";
 		cin >> Pname;
 
 		system("cls");
-		for (int i = 0; i < People - 2; i++) {
-			if (Pname == a[i].getName()) {
-				Pname = a[i].getName();
+		for (int i = 0; i < p.size() - 2; i++) {
+			if (Pname == p[i].getName()) {
+				Pname = p[i].getName();
 				cout << "****************************************** Welcome To " << Pname << "'s Notice Board!!" << "****************************************** " << endl;
 				cout << ">> Who is best Commenter?" << endl;
 				cout << "************************************************* Cheer Up Comment List ************************************************" << endl;
-				b.show(a);
+				b.show(p);
 				cout << "***********************************************************************************************************************" << endl;
 				cin >> Vname;
 				system("cls");
