@@ -12,14 +12,6 @@ using namespace std;
 		vote = rand() % 100;
 	}
 
-	void Participant::setParticipant(string position, string name, string tall, string age, string weight) {
-		this->position = position;
-		this->name = name;
-		this->age = age;
-		this->weight = weight;
-
-	}
-
 	void Participant::votep() {
 		this->vote++;
 	}

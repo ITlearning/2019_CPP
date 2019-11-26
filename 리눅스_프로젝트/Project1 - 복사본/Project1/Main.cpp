@@ -5,6 +5,7 @@
 
 using namespace std;
 vector<Participant> Group;
+vector<Viewer> User;
 int num = 0;
 int main() {
 	Manager a;
@@ -39,7 +40,7 @@ int main() {
 
 			system("cls");
 
-			if (num == 5) {
+			if (num == 6) {
 				continue;
 			}
 			else if (num == 1) {
@@ -52,10 +53,6 @@ int main() {
 				c.show(Group);
 			}
 			else if (num == 4) {
-				if (Group.size() == 0) {
-					cout << "등록된 참가자가 없습니다." << endl;
-					exit;
-				}
 				c.mypick(Group);
 			}
 			else if (num == 5) {
@@ -99,7 +96,7 @@ int main() {
 				a.show(Group);
 			}
 			else if (num == 4) {
-				a.comment(Group, c);;
+				a.comment(Group, c);
 			}
 			else if (num == 5) {
 				;

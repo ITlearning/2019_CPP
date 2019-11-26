@@ -9,7 +9,6 @@ class Participant {
 public:
 	Participant();
 	Participant(string position, string name, string tall, string age, string weight);
-	void setParticipant(string position, string name, string tall, string age, string weight);
 	void votep();
 	void PickVote();
 

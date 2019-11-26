@@ -1,5 +1,5 @@
 #include "Manager.h"
-	void Manager::addP(vector<Participant> p) {
+	void Manager::addP(vector<Participant>& p) {
 		cout << "등록할 사람을 입력하세요 [포지션, 이름, 키, 나이, 몸무게 순입니다] " << endl;
 		cout << ">> ";
 		cin >> position >> name >> tall >> age >> weight;
@@ -14,7 +14,7 @@
 		//참가자의 등수 상승,하락 폭을 가시화 해줌 -
 		//1주차 : 10위, 2주차 : 5위 ,뭐 이런식으로
 	}
-	void Manager::pheonix(vector<Participant> p) {
+	void Manager::pheonix(vector<Participant>& p) {
 		string name;
 		int num;
 		//관리자는, 모든 참가자의 투표수에 관여할 수 있음 (*조작 가능)
@@ -39,7 +39,7 @@
 			}
 		}
 	}
-	void Manager::comment(vector<Participant> p, Viewer b) {
+	void Manager::comment(vector<Participant>& p, Viewer& b) {
 		string Pname;
 		string Vname;
 		//게시판에 들어가, 가장 따뜻한 말을 쓴 글쓴이를 추천.
@@ -62,27 +62,27 @@
 		cin >> Pname;
 
 		system("cls");
-		for (int i = 0; i < p.size() - 2; i++) {
+		for (int i = 0; i < p.size(); i++) {
 			if (Pname == p[i].getName()) {
 				Pname = p[i].getName();
 				cout << "****************************************** Welcome To " << Pname << "'s Notice Board!!" << "****************************************** " << endl;
 				cout << ">> Who is best Commenter?" << endl;
 				cout << "************************************************* Cheer Up Comment List ************************************************" << endl;
-				b.show(p);
+				b.showComment();
 				cout << "***********************************************************************************************************************" << endl;
+				cout << "마음에 드는 댓글을 쓴 사람을 뽑아주세요." << endl;
 				cin >> Vname;
 				system("cls");
-
-				if (Vname == b.name) {
-					// 점수 증가
+				if (b.viewer.find(Vname) == b.viewer.end()) {
+					cout << "없습니다." << endl;
 				}
 				else {
-					cout << " >> We don't find him :(" << endl;
+
+					b.setVoteNum();
+					cout << b.getVoteNum() << endl;
+					cout << endl;
+					cout << Vname << "님의 투표수를 늘렸습니다. 감사합니다." << endl;
 				}
 			}
-			else {
-				cout << ">> We don't find him :(" << endl;
-			}
-
 		}
 	}

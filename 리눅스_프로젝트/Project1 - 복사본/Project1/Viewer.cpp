@@ -2,20 +2,22 @@
 #include "Participant.h"
 using namespace std;
 int Pick = NULL;
-	void Viewer::vote(vector<Participant> p) {
+
+
+	void Viewer::vote(vector<Participant>& p) {
 		cout << "어떤 연습생에게 투표하시겠습니까?" << endl;
 		for (int i = 0; i < p.size(); i++) {
 			cout << p[i].getName() << " 연습생 (" << p[i].getPosition() << ")" << endl;
 		}
 		cin >> name;
-		for (int i = 0; i < People; i++) {
+		for (int i = 0; i < p.size(); i++) {
 			if (p[i].getName() == name) {
 				p[i].votep();
 			}
 		}
 	}
 
-	void Viewer::show(vector<Participant> p) {
+	void Viewer::show(vector<Participant>& p) {
 		string name;
 		cout << "Please input the name that you want to see>>";
 		cin >> name;
@@ -34,8 +36,14 @@ int Pick = NULL;
 		}
 	}
 	
-	void Viewer::Rank(vector<Participant> p) {
-		//sort(p, p + 3);
+	void Viewer::setVoteNum() { this->VoteNum += 10; }
+	int Viewer::getVoteNum() { return VoteNum; }
+	bool compare(Participant p, Participant p2) {
+		return p.getVote() > p2.getVote();
+	}
+
+	void Viewer::Rank(vector<Participant>& p) {
+		sort(p.begin(), p.end(), compare);
 		for (int i = 0; i < p.size(); i++) {
 			cout << i + 1 << "등 : " << p[i].getName() << "\t 투표수 : " << p[i].getVote() << endl;
 		}
@@ -48,14 +56,14 @@ int Pick = NULL;
 			}
 		}
 	}
-	void Viewer::mypick(vector<Participant> p) {
+	void Viewer::mypick(vector<Participant>& p) {
 		int num;
 		//자신의 고정픽을 선정하여, 매주 한표씩 자동으로 투표되게 함.
 		//고정픽 투표는 공짜로, 다른 참가자를 둘러볼 기회도 제공.
 		//추가 투표권, 투표수 x2, 자동투표 , 
 		if (Pick == NULL) {
 			cout << "Choose your own fixed pick!(Only Number Please!)" << endl;
-			for (int i = 0; i < People; i++) {
+			for (int i = 0; i < p.size(); i++) {
 				cout << i + 1 << ": " << p[i].getName() << endl;
 			}
 			cin >> num;
@@ -77,7 +85,7 @@ int Pick = NULL;
 		}
 	}
 
-	void Viewer::cheerup(vector<Participant> p) {
+	void Viewer::cheerup(vector<Participant>& p) {
 		string Vname;
 		string commit;
 		string name;
@@ -110,5 +118,12 @@ int Pick = NULL;
 				viewer.insert(make_pair(Vname, commit));
 				system("cls");
 			}
+		}
+	}
+
+	void Viewer::showComment() {
+		map<string, string>::iterator iter;
+		for (iter = viewer.begin(); iter != viewer.end(); iter++) {
+			cout << "[" << iter->first << "]: " << iter->second << endl;
 		}
 	}

@@ -1,3 +1,6 @@
-﻿  Main.cpp
-c:\users\iot-20\desktop\git\리눅스_프로젝트\project1\project1\main.cpp(57): warning C4551: 함수 호출에 인수 목록이 없습니다.
-  Project1.vcxproj -> C:\Users\IOT-20\Desktop\GIt\리눅스_프로젝트\Project1\Debug\Project1.exe
+﻿  Manager.cpp
+c:\users\iot-20\desktop\git\리눅스_프로젝트\project1 - 복사본\project1\manager.cpp(26): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\iot-20\desktop\git\리눅스_프로젝트\project1 - 복사본\project1\manager.cpp(32): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\iot-20\desktop\git\리눅스_프로젝트\project1 - 복사본\project1\manager.cpp(57): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\iot-20\desktop\git\리눅스_프로젝트\project1 - 복사본\project1\manager.cpp(65): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+  Project1.vcxproj -> C:\Users\IOT-20\Desktop\GIt\리눅스_프로젝트\Project1 - 복사본\Debug\Project1.exe

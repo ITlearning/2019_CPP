@@ -1,0 +1,9 @@
+﻿  Viewer.cpp
+c:\users\iot-20\desktop\git\리눅스_프로젝트\project1 - 복사본 - 복사본\project1\viewer.cpp(8): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\iot-20\desktop\git\리눅스_프로젝트\project1 - 복사본 - 복사본\project1\viewer.cpp(12): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\iot-20\desktop\git\리눅스_프로젝트\project1 - 복사본 - 복사본\project1\viewer.cpp(23): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\iot-20\desktop\git\리눅스_프로젝트\project1 - 복사본 - 복사본\project1\viewer.cpp(44): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\iot-20\desktop\git\리눅스_프로젝트\project1 - 복사본 - 복사본\project1\viewer.cpp(63): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\iot-20\desktop\git\리눅스_프로젝트\project1 - 복사본 - 복사본\project1\viewer.cpp(99): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\iot-20\desktop\git\리눅스_프로젝트\project1 - 복사본 - 복사본\project1\viewer.cpp(107): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+  Project1.vcxproj -> C:\Users\IOT-20\Desktop\GIt\리눅스_프로젝트\Project1 - 복사본 - 복사본\Debug\Project1.exe
